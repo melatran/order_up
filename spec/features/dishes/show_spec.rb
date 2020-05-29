@@ -23,7 +23,7 @@ RSpec.describe "Dish's Show Page" do
     expect(page).to have_content("Leftover Turkey")
     expect(page).to have_content("Tomatoes")
     expect(page).to have_content("Swiss Cheese")
-
+    expect(page).to have_content("Total Calories: 500")
   end
 end
 

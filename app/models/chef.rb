@@ -6,7 +6,7 @@ class Chef <ApplicationRecord
     dishes.joins(:ingredients).distinct.pluck("ingredients.name")
   end
 
-  def most_popular
+  def most_popular #desc order
     Ingredient.joins(:dishes).group(:id).order("count(dishes.id) desc").limit(3).pluck(:name)
   end
 end

@@ -26,8 +26,29 @@ RSpec.describe Dish, type: :model do
       DishIngredient.create(dish_id: sandwich.id, ingredient_id: turkey.id)
       DishIngredient.create(dish_id: sandwich.id, ingredient_id: tomatoes.id)
       DishIngredient.create(dish_id: sandwich.id, ingredient_id: cheese.id)
-      
+
       expect(sandwich.total_calories).to eq(500)
     end
   end
 end
+  #   it ".list_of_ingredients" do
+  #     monica = Chef.create(name: "Monica Geller")
+  #     sandwich = Dish.create(name: "Turkey Sandwich With Moist Maker", description: "It's my sandwich!", chef_id: monica.id)
+  #     fondue = Dish.create(name: "Cheese Fondue", description: "It's delicious", chef_id: monica.id)
+  #
+  #     bread = Ingredient.create(name: "Brioche", calories: 200)
+  #     turkey = Ingredient.create(name: "Leftover Turkey", calories: 150)
+  #     tomatoes = Ingredient.create(name: "Tomatoes", calories: 60)
+  #     cheese = Ingredient.create(name: "Swiss Cheese", calories: 90)
+  #     sugar = Ingredient.create(name: "Sugar", calories: 100)
+  #
+  #     DishIngredient.create(dish_id: sandwich.id, ingredient_id: bread.id)
+  #     DishIngredient.create(dish_id: sandwich.id, ingredient_id: turkey.id)
+  #     DishIngredient.create(dish_id: sandwich.id, ingredient_id: tomatoes.id)
+  #     DishIngredient.create(dish_id: sandwich.id, ingredient_id: cheese.id)
+  #     DishIngredient.create(dish_id: fondue.id, ingredient_id: cheese.id)
+  #     DishIngredient.create(dish_id: fondue.id, ingredient_id: sugar.id)
+  #
+  #     expect()
+  #   end
+  # end
